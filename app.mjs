@@ -14,20 +14,6 @@ const tab = await response.json();
 
 const iterator = trouverMinimum(tab);
 
-// document.getElementById("next").onclick = () => {
-//   const step = gen.next();
-//   if (step.done) {
-//     log.success("Fin de l'algorithme");
-//     // log.textContent += "\n--- Fin de l'algorithme ---";
-//     return;
-//   }
-
-//   const { msg, current, minIndex } = step.value;
-//   renderArray(tab, current, minIndex);
-//   log.info(msg);
-//   // log.textContent += msg + "\n";
-// };
-
 btnNext.addEventListener("click", () => {
   if (!iterator) return;
 
@@ -63,4 +49,4 @@ btnNext.addEventListener("click", () => {
   }
 });
 
-renderArray(arrayContainer, tab, null, null);
+renderArray(arrayContainer, tab, 0, null);
