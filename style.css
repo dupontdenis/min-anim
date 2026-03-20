@@ -1,0 +1,139 @@
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-rows: 40px 20px;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #444;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .current {
+      background-color: #cce0ff;
+      border-color: #0066ff;
+    }
+
+    .min {
+      background-color: #ccffcc;
+      border-color: #00aa00;
+    }
+
+    .arrow {
+      width: 40px;
+      height: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    #log {
+      margin-top: 20px;
+      white-space: pre-line;
+      font-family: monospace;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: grid;
+      grid-template-areas:
+        "h"
+        "m"
+        "n";
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    h2 {
+      grid-area: h;
+      margin: 0;
+    }
+
+    #main {
+      grid-area: m;
+      display: grid;
+      gap: 16px;
+    }
+
+    #sidebar {
+      grid-area: n;
+      height: auto;
+    }
+
+    #log-container {
+      padding: 15px;
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+
+    .log-entry {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .log-info {
+      border-left: 4px solid #007bff;
+    }
+
+    .log-compare {
+      border-left: 4px solid #ff9800;
+    }
+
+    .log-find {
+      border-left: 4px solid #43a047;
+    }
+
+
+    #sidebar {
+
+      width: 300px;
+      height: 100vh;
+      background: #fafafa;
+      border-left: 2px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    #sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: #eee;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* XL screens: place sidebar on the left using grid */
+    @media (min-width: 1000px) {
+      body {
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+          "h h"
+          "n m";
+      }
+
+
+    }
